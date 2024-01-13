@@ -30,25 +30,10 @@ class MainActivity4 : AppCompatActivity() {
             binding.tvOrder.text = orderString
 
             Toast.makeText(this, "Order successful!", Toast.LENGTH_SHORT).show()
-            //couldn't hack how to use custom toast  in view binding
-//            Toast(this).apply {
-//                duration = Toast.LENGTH_LONG
-//                view = layoutInflater.inflate(R.layout.custom_toast,clToast)
-//                show()
-//            }
-        }
-        //check on this later on
-        fun showToast() {
-            val duration = Toast.LENGTH_LONG
 
-            val layout = layoutInflater.inflate(R.layout.custom_toast, findViewById(R.id.clToast))
-            Toast(this).apply {
-                duration
-                layout
-                show()
-            }
-        }
-        showToast()
+
+
     }
 
+}
 }

@@ -1,5 +1,6 @@
 package com.example.back2basics
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -13,12 +14,25 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        binding.btnApply.setOnClickListener {
-            val firstName = binding.etFirstName.text.toString()
-            val lastName = binding.etLastName.text.toString()
-            val birthDate = binding.etBirthDate.text.toString()
-            val country = binding.etCountry.text.toString()
-            Log.d("MainActivity", "$firstName $lastName, born on $birthDate, from $country just applied to the program")
+        binding.btnActivity1.setOnClickListener {
+            Intent(this, MainActivity5::class.java).also {
+                startActivity(it)
+            }
+        }
+        binding.btnActivity2.setOnClickListener {
+            Intent(this, MainActivity2::class.java).also {
+                startActivity(it)
+            }
+        }
+        binding.btnActivity3.setOnClickListener {
+            Intent(this, MainActivity3::class.java).also {
+                startActivity(it)
+            }
+        }
+        binding.btnActivity4.setOnClickListener {
+            Intent(this, MainActivity4::class.java).also {
+                startActivity(it)
+            }
         }
     }
 }

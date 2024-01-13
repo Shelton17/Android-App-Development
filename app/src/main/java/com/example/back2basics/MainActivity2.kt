@@ -14,8 +14,8 @@ class MainActivity2 : AppCompatActivity() {
         setContentView(view)
 
         binding.btnAdd.setOnClickListener{
-            val firstNumber = binding.etFirstNumber.text.toString()
-            val secondNumber = binding.etSecondNumber.text.toString()
+            val firstNumber = binding.etFirstNumber.text.toString().toInt()
+            val secondNumber = binding.etSecondNumber.text.toString().toInt()
             var result = firstNumber + secondNumber
 
             binding.tvResult.text = result.toString()
