@@ -3,6 +3,7 @@ package com.example.back2basics
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.RadioButton
+import android.widget.Toast
 import com.example.back2basics.databinding.ActivityMain4Binding
 
 class MainActivity4 : AppCompatActivity() {
@@ -25,6 +26,8 @@ class MainActivity4 : AppCompatActivity() {
                     (if (onions) "\nOnions" else "")+
                     (if (salad) "\nSalad" else "")
             binding.tvOrder.text = orderString
+
+            Toast.makeText(this, "Order successful!", Toast.LENGTH_SHORT).show()
         }
     }
 }
