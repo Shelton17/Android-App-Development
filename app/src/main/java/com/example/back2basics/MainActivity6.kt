@@ -12,12 +12,9 @@ class MainActivity6 : AppCompatActivity() {
         binding = ActivityMain6Binding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
-        val firstName = intent.getStringExtra("EXTRA_FIRST_NAME")
-        val lastName = intent.getStringExtra("EXTRA_LAST_NAME")
-        val birthDate = intent.getStringExtra("EXTRA_BIRTH_DATE")
-        val country = intent.getStringExtra("EXTRA_COUNTRY")
+        val person = intent.getSerializableExtra("EXTRA_PERSON") as Person
 
-        var summary = "$firstName $lastName, born on $birthDate. \n Location: $country"
-        binding.tvDisplay.text = summary
+
+        binding.tvDisplay.text = person.toString()
     }
 }
