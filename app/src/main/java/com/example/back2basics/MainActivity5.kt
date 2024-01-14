@@ -1,5 +1,6 @@
 package com.example.back2basics
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -20,6 +21,13 @@ class MainActivity5 : AppCompatActivity() {
             val birthDate = binding.etBirthDate.text.toString()
             val country = binding.etCountry.text.toString()
             Log.d("MainActivity", "$firstName $lastName, born on $birthDate, from $country just applied to the program")
+            Intent(this, MainActivity6::class.java).also {
+                it.putExtra("EXTRA_FIRST_NAME", firstName)
+                it.putExtra("EXTRA_LAST_NAME", lastName)
+                it.putExtra("EXTRA_BIRTH_DATE", birthDate)
+                it.putExtra("EXTRA_COUNTRY", country)
+                startActivity(it)
+            }
         }
     }
 }
