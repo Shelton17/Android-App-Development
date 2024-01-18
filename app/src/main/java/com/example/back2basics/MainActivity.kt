@@ -34,5 +34,10 @@ class MainActivity : AppCompatActivity() {
                 startActivity(it)
             }
         }
+        binding.btnImplicitIntent.setOnClickListener {
+            Intent(this, ImplicitIntentActivity::class.java).also {
+                startActivity(it)
+            }
+        }
     }
 }
