@@ -39,5 +39,10 @@ class MainActivity : AppCompatActivity() {
                 startActivity(it)
             }
         }
+        binding.btnRecyclerView.setOnClickListener {
+            Intent(this, RecyclerViewActivity::class.java).also {
+                startActivity(it)
+            }
+        }
     }
 }
