@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Back2Basics</string>
+    <string-array name="months">
+        <item>Kenya</item>
+        <item>Uganda</item>
+        <item>Tanzania</item>
+        <item>Rwanda</item>
+        <item>Burundi</item>
+        <item>South Sudan</item>
+        <item>Ethiopia</item>
+    </string-array>
 </resources>
